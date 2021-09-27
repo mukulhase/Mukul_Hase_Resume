@@ -10,11 +10,11 @@ jobs:
     - name: Set up Git repository
       uses: actions/checkout@v1
     - name: Compile Resume
-      uses: xu-cheng/latex-action@master
+      uses: xu-cheng/latex-action@v2
       with:
         root_file: main.tex
+        latexmk_use_lualatex: true
         working_directory: .
-        args: "-xelatex -shell-escape -file-line-error -interaction=nonstopmode"
     - name: Check pdf files
       run: |
         file main.pdf | grep -q ' PDF '
