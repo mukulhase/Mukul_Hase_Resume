@@ -16,7 +16,7 @@
 \usepackage[absolute]{textpos}
 \usepackage[UKenglish]{babel}
 \usepackage[UKenglish]{isodate}
-\usepackage{fontspec,xltxtra,xunicode}
+\usepackage{fontspec}
 
 % Color definitions
 \definecolor{date}{HTML}{666666} 
@@ -25,9 +25,9 @@
 \definecolor{subheadings}{HTML}{333333}
 
 % Set main fonts
-\defaultfontfeatures{Mapping=tex-text}
+\defaultfontfeatures{WordSpace={1.1}}
 \setmainfont[Color=primary, Path = fonts/lato/]{Lato-Lig}
-\setsansfont[Scale=MatchLowercase,Mapping=tex-text, Path = fonts/raleway/]{Raleway-ExtraLight}
+\setsansfont[Scale=MatchLowercase,Ligatures=TeX, Path = fonts/raleway/]{Raleway-ExtraLight}
 \newcommand{\custombold}[1]{\color{subheadings}\fontspec[Path = fonts/lato/]{Lato-Reg}\selectfont #1 \normalfont}
 
 % Date command
