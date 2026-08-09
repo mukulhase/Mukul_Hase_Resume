@@ -1,212 +1,173 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Deedy - One Page Two Column Resume
-% LaTeX Template
-% Version 1.1 (30/4/2014)
-%
-% Original author:
-% Debarghya Das (http://debarghyadas.com)
-%
-% Original repository:
-% https://github.com/deedydas/Deedy-Resume
-%
-% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
-%
-% This template uses several fonts not included with Windows/Linux by
-% default. If you get compilation errors saying a font is missing, find the line
-% on which the font is used and either change it to a font included with your
-% operating system or comment the line out to use the default font.
+%-------------------------
+% Resume in LaTeX
+% Based on the sb2nov/resume template (MIT License, see LICENSE.txt)
+% https://github.com/sb2nov/resume
+%------------------------
 
-\documentclass[]{deedy-resume-openfont}
+\documentclass[letterpaper,10pt]{article}
 
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.6in}
+\addtolength{\textheight}{1.2in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated PDF is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[2]{
+  \item\small{
+    \textbf{#1}{: #2 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+    \begin{tabular*}{0.97\linewidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \textit{\small #3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeItemPlain}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=*]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%
 
 \begin{document}
 
-\lastupdated
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+  \textbf{\href{https://mukulhase.com}{\Large Mukul Hase}} & Email: \href{mailto:mukulhase@gmail.com}{mukulhase@gmail.com}\\
+  \textit{Senior Software Engineer \textperiodcentered\ AI Systems \& Desktop Platforms} & Mobile: \href{tel:+15109886730}{+1 (510) 988-6730} \\
+  San Francisco, CA & \href{https://mukulhase.com}{\underline{mukulhase.com}} \textperiodcentered\ \href{https://github.com/mukulhase}{\underline{github.com/mukulhase}} \\
+\end{tabular*}
 
-\begin{textblock}{60}(0,0)
-\color{date}\fontspec[Path = fonts/raleway/]{Raleway-Bold}\fontsize{8pt}{10pt}\selectfont 
-*Eligible to work in USA(Citizen)
-\end{textblock}
+%-----------SUMMARY-----------------
+\vspace{7pt}
+{\small Eight years shipping production software end to end. At Figma, worked on the platform behind its AI agent and took design editing from prototype to production, spanning agent runtimes, model infrastructure, editor internals, and product UI; before that, owned the desktop client and its native macOS and Windows layers. Earlier, edge computer vision on Office Lens at Microsoft.}
+\vspace{4pt}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     TITLE NAME
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\namesection{Mukul}{Hase}{ \urlstyle{same}\underline{\url{https://mukulhase.com}} | \href{mailto:mukulhase@gmail.com}{\underline{mukulhase@gmail.com}} | +1 ‪(510) 988 6730
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN ONE
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{minipage}[t]{0.33\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EDUCATION
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Education} 
-
-\subsection{IIIT Hyderabad}
-\descript{Bachelor's in Computer Science \& Engineering}
-\location{Grad June 2018 | Hyderabad, India\\ CGPA: 8.34/10}
-\sectionsep
-\subsection{Narayana Junior College}
-\location{Grad. May 2014|  Hyderabad, India\\ Percentage: 93}
-\sectionsep
-\subsection{Delhi Public School}
-\location{Grad. May 2012|  Hyderabad, India\\ CGPA: 10/10}
-\sectionsep
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     AWARDS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Awards} 
-\begin{tabular}{@{}lll}
-2017	     & 1\textsuperscript{st} Place  & \textbf{\underline{\href{https://www.nbo.om/en/Pages/Competitions/NBO-Hackathon.aspx}{NBO Hackathon}}}\\
-2016	     & 2\textsuperscript{nd} Place & \textbf{\underline{\href{https://www.acadaccelerator.com/}{MS Code.Fun.Do}}}\\
-2018         & Dean's List  & IIIT 4\textsuperscript{th} Year\\
-2016	     & Dean's List  & IIIT 2\textsuperscript{nd} Year\\
-2015	     & Dean's List  & IIIT 1\textsuperscript{st} Year\\
-
-\end{tabular}
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     SKILLS
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Skills}
-\subsection{Programming}
-\location{Languages (Advanced):}
- Python \textbullet{} Javascript (\& variants) \\
-\location{Languages (Proficient):}
-Java \textbullet{} C++
-\textbullet{} Swift 
-\textbullet{} Rust 
-\textbullet{} Obj-C
- \textbullet{} Racket \textbullet{} Rails \textbullet{} C \textbullet{} PHP \textbullet{} Assembly  \textbullet{} Shell \textbullet{} Matlab \textbullet{} CSS
-\textbullet{} Scheme   \\
-\location{Familiar Technologies:}
-React \textbullet{} OpenCV \textbullet{} AngularJS \textbullet{} MySQL \textbullet{} Postgres \textbullet jQuery \textbullet{} NumPy \textbullet{} Django \textbullet{} Android
-\textbullet{} Cordova/Ionic \textbullet{} Git \textbullet{} Unreal Engine
-\textbullet{} Chrome Extensions \textbullet{} PyQt \textbullet{} PyPI \textbullet{} Socket Programming \textbullet{} Keras \textbullet{} iOS \textbullet{} MeteorJS \textbullet{} React Native  \textbullet{} Electron
-\sectionsep
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     COURSEWORK
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section{Coursework}
-\subsection{UnderGraduate}
-Computer Vision \\
-Statistical Methods in AI \\
-Data Structures \\
-Complexity and Advanced Algorithms \\
-Game Design and Engineering \\
-Artificial Intelligence \\
-Computer Networks \\
-Operating Systems \\
-Database Systems \\
-Distributed System \\
-Functional Programming \\
-Principles of Information Security\\
-\sectionsep
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%     COLUMN TWO
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\end{minipage} 
-\hfill
-\begin{minipage}[t]{0.66\textwidth} 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     EXPERIENCE
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%-----------EXPERIENCE-----------------
 \section{Experience}
-\runsubsection{Software Developer at \href{https://figma.com/}{\underline{Figma}} }\\
-\location{Sep 2021 – Current | San Francisco, CA}
-\descript{2nd Desktop Developer for Figma Electron Client}
-Developing and maintaining native features for their desktop application. (React, Electron, Rust)\\
-\sectionsep
-\runsubsection{Software developer 2 at \href{https://microsoft.com/}{\underline{Microsoft}} }\\
-\location{June 2018 – Current | Redmond, WA}
-\descript{Whiteboard sharing feature in Microsoft Teams}
-Developing UI/UX in their Desktop App. (React, Graphql, Electron, Apollo)\\
-\descript{End-to-end development of edge-based computer vision models for Document Cleanup, Cropping and Classification}
-\textbullet Created a parametric system to generate realistic synthetic images of documents. (Used for training and scoring)
-\textbullet Wrote various Python tools for data collection, filtering, processing datasets \textbullet Created a pipeline for data-collection and training on AML \textbullet Created different voting, annotation and analysis tools.  \textbullet Ported desktop models to ONNX/CoreML/TFlite and implemented models on Native Android \& iOS. \\
-\descript{Native Mobile App Development (Android and IOS) in Office Lens}
-\textbullet  Worked on the Camera stack \textbullet  OfficeLens Re-architecture (Kotlin) \textbullet  Wrote GPU Shaders (Metal \& OpenGLES) \textbullet  Performance improvements on document deletion/updation times (10x)
-\textbullet Created custom UI Animations.
-\sectionsep
+  \resumeSubHeadingListStart
 
-\runsubsection{SWE Intern at \href{https://freeagent.network/}{\underline{FreeAgent Software}} } (Bay Area startup) \\
-\location{May 2017 – July 2017 | Saratoga, CA}
-Worked with full-stack web technologies like React, GraphQL, Sequelize, Express, Apollo. \textbullet Quickly ramp up on codebase and provide my first POC within a week.
-\textbullet Built a merge feature. In the process, I smoothly handled a complete codebase refactor when switching database key from incremental ID to UUIDv4 ID.
-\textbullet End to End creation of filtering system. Backend: Queries, APIs , Frontend: HOC, UI
+    \resumeSubheading
+      {Figma}{San Francisco, CA}
+      {Senior Software Engineer}{Sep 2021 -- Current}
+      \resumeItemListStart
+        \resumeItem{Figma Agent, agent platform \& AI design editing (2025--Current)}
+          {Worked on core platform behind Figma's AI agent: multi-agent and subagent orchestration across Claude, Codex, and OpenCode runtimes, sandboxed agent execution, MCP tool interfaces, streaming protocols with disconnect and completion semantics, and agent prompt, configuration, and release management. Integrated a Cerebras-hosted in-house model that cut generation from minutes to 5 seconds (30x faster, now serving 80\% of traffic) and built the model routing, picker, and fallback layer behind it. Improved reliability across a nondeterministic system: reduced the top failure mode from 4\% to 0.5\% and auto-recovered 37\% of common errors through retries and self-healing agents. Took prompt-to-edit, one surface on that platform, from research prototype to production, including the on-canvas editing surface and undo/commit flow. Built the team's debug tooling and eval infrastructure. Worked across the stack: React surfaces, TypeScript and Go services, C++ in the editor core, and Python eval tooling.}
+        \resumeItem{First Draft, prompt-to-design generation (2024)}
+          {Moved to the AI generation team and owned First Draft through general availability. Built the design-system intelligence behind it: matching generated output to a team's existing component library, detecting IP conflicts, and inferring component props, plus prompt suggestions and progressive loading for slow image generation. Instrumented the analytics and dashboards used to measure generation quality.}
+        \resumeItem{Figma Desktop, Electron (2021--2024)}
+          {Built the desktop notification feed end to end (macOS/Windows, spanning native, Node, and web layers); tray surface, push delivery, and comment previews lifted notification click-through 25\%. Integrated cross-platform native spellcheck, bringing 30+ languages to Figma and FigJam. Rebuilt desktop CI/CD from scratch: signed dogfood and per-PR build channels that caught regressions before they reached beta. Shipped the desktop side of Figma's UI3 redesign, launched at Config, plus trackpad haptics, light mode, and the tab bar.}
+      \resumeItemListEnd
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%     Projects
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \resumeSubheading
+      {Microsoft}{Redmond, WA}
+      {Software Engineer II}{June 2018 -- Sep 2021}
+      \resumeItemListStart
+        \resumeItem{Whiteboard sharing feature, Microsoft Teams}
+          {Built UI/UX in the Teams desktop app (React, GraphQL, Electron, Apollo).}
+        \resumeItem{Edge computer vision for document cleanup, cropping \& classification}
+          {Built a parametric image rendering pipeline generating realistic synthetic document images for training and scoring, Python tooling for data collection/filtering/processing, a data-collection and training pipeline on AML, and voting/annotation/analysis tools. Ported models to ONNX/CoreML/TFLite and ran them natively on Android and iOS.}
+        \resumeItem{Native mobile development, Office Lens (Android \& iOS)}
+          {Camera stack, Kotlin re-architecture, GPU shaders (Metal \& OpenGLES), custom UI animations, and a 10x improvement in document deletion/update time.}
+      \resumeItemListEnd
 
-\section{Projects}
-\runsubsection{ Python library for WhatsApp Web }\\
-\descript{Widely Used 1500+ stars}
-\textbf{\href{https://github.com/mukulhase/WhatsAPI}{[\underline{github}]}} Capable of running bots to respond to Whatsapp messages while the phone is able to independently operate. Deployed on PyPI.
-\sectionsep
+    \resumeSubheading
+      {FreeAgent Software}{Saratoga, CA}
+      {SWE Intern (Bay Area startup)}{May -- July 2017}
+      \resumeItemListStart
+        \resumeItem{Full-stack web development}
+          {React, GraphQL, Express. Built a merge feature, led an incremental-ID to UUIDv4 key migration, and built a filtering sidebar with multi-property constraints across query APIs and UI.}
+      \resumeItemListEnd
 
-\runsubsection{ Twinder (Ionic App) }
-\descript{Microsoft Code-Fun-Do Winner}
-Localised and personalised tweet feed with sources and reference suggested based on tweet’s context. Swipe left to discard, right to read more(Tinder).
-\sectionsep
+  \resumeSubHeadingListEnd
 
-\runsubsection{ 3-Sweep }
-\descript{ Computer Vision desktop application. }
-\textbf{\href{https://github.com/mukulhase/3-Sweep-Library}{[\underline{github}]}} Desktop application which let's you drag-select objects(like in Photoshop), and manipulate your 2D image in 3D
-\sectionsep
+%-----------PROJECTS+AWARDS | EDUCATION+SKILLS (split footer)-----------------
+\noindent
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
 
-\runsubsection{ Pebble Messenger } \\
-\descript{ Shake2talk over Facebook chat on smart watch }
-260 Users. MeteorJS Implementation involved handling multiple active facebook sessions on one AWS server and smartly fetching messages.
-\sectionsep
+  \section{Projects}
+    \resumeSubHeadingListStart
+      \resumeSubItem{WhatsAPI}
+        {Python library for WhatsApp Web, 1500+ GitHub stars, deployed on PyPI. \href{https://github.com/mukulhase/WhatsAPI}{[github]}}
+      \resumeSubItem{Others}
+        {Pebble Messenger (Shake2talk over Facebook chat, 260 users); 3-Sweep (Photoshop-style 2D-to-3D image manipulation) \href{https://github.com/mukulhase/3-Sweep-Library}{[github]}; WebGL 3D Game; IIIT's event portal (personalized calendars by student ``groups,'' integrated with college LDAP).}
+    \resumeSubHeadingListEnd
 
-% \runsubsection{ Price-Comparison system }
+  \section{Awards}
+    \resumeSubHeadingListStart
+      \resumeItemPlain{2018 \textperiodcentered\ Dean's List, IIIT, 4th Year}
+      \resumeItemPlain{2017 \textperiodcentered\ 1st Place, NBO Hackathon}
+      \resumeItemPlain{2016 \textperiodcentered\ 2nd Place, Microsoft Code.Fun.Do}
+      \resumeItemPlain{2016 \textperiodcentered\ Dean's List, IIIT, 2nd Year}
+      \resumeItemPlain{2015 \textperiodcentered\ Dean's List, IIIT, 1st Year}
+    \resumeSubHeadingListEnd
 
-% \descript{Price-Comparison system for Shoppersexpress.in}
-% \textbf{\href{http://mukulhase.com/Comparison/project/Project_Files/index.html}{[link]}} Designed a unique backend-free way to scrape data from multiple online stores(Flipkart, Amazon, Snapdeal) using iframes, proxies etc).
-% \sectionsep
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\raggedright
 
-% \runsubsection{ 2-D Virtual Clothes fitter }
+  \section{Education}
+    \resumeSubHeadingListStart
+      \resumeItemPlain{\textbf{IIIT Hyderabad} \textperiodcentered\ B.Tech Computer Science \textperiodcentered\ CGPA 8.34/10 \textperiodcentered\ 2014--2018}
+    \resumeSubHeadingListEnd
 
-% \descript{An 2D image  approach for virtual clothes fitting}
-% A user takes a photo of himself/herself and virtually tries on template clothes available on any e-commerce websites. ~ Flask, Matlab(For image processing)
-% \sectionsep
+  \section{Skills}
+    \resumeSubHeadingListStart
+      \resumeItemPlain{\textbf{Languages}: TypeScript/JavaScript, Python, Go, C++/Objective-C++, Kotlin, Swift, Rust}
+      \resumeItemPlain{\textbf{AI \& Agent Systems}: LLM agent orchestration, MCP tooling (Claude, Codex, OpenCode), sandboxed multi-agent execution, SSE streaming \& chunked responses, model routing \& fallback (SageMaker, Cerebras, Fireworks, Anthropic), eval harnesses \& observability}
+      \resumeItemPlain{\textbf{Desktop Platform}: Electron internals, native macOS/Windows (AppKit, Obj-C++, C++), code signing \& notarization (Apple, DigiCert HSM), release engineering}
+      \resumeItemPlain{\textbf{Web, Backend \& Infra}: React, GraphQL, Node/Express, Protobuf, GitHub Actions, Bazel, Terraform, AWS, Datadog/Sentry}
+    \resumeSubHeadingListEnd
 
-% \runsubsection{ Election portal using “Single Transferable Vote” }
+\end{minipage}
 
-% \descript{Used for college parliament elections \textbf{\href{github.com/mukulhase/STVElection}}{[github]}}
-% \sectionsep
-
-% \runsubsection{ IIIT’s fest(Felicity) website and MUN website } \\
-% Website Coordinator: \textbf{\href{http://felicity.iiit.ac.in/}{http://felicity.iiit.ac.in/}} \\
-% USG Technology: \textbf{\href{https://mun.iiit.ac.in}{https://mun.iiit.ac.in}}
-% \sectionsep
-
-\runsubsection{ Misc. Projects } \textbullet
-\href{https://mukulhase.com/ThreeJSCarrom/}{\underline{Feature-filled Webgl 3D Game}} \textbullet  IIIT’s event portal, Gives everyone a personalized calendar based on their “groups”, integrated with college’s LDAP authentication. \textbullet Ultimate\textbf{} TicTacToe AI Solver \textbullet File Downloading Server(TCP/UDP) \textbullet Shell in C
-
-\end{minipage} 
-\end{document}  \documentclass[]{article}
+\end{document}
