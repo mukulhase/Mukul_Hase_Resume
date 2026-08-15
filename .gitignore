@@ -1,0 +1,9 @@
+# LaTeX build output — the PDF is built by CI and published to gh-pages
+*.pdf
+*.aux
+*.log
+*.out
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+*.toc
